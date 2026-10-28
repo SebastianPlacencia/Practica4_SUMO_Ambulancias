@@ -1,0 +1,25 @@
+<configuration>
+    <input>
+        <net-file value="cuenca_ciudad.net.xml"/>
+        <route-files value="fondo_autos.rou.xml,fondo_buses.rou.xml,fondo_motos.rou.xml"/>
+        <additional-files value="vtypes.add.xml,macro.add.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="12600"/> <!-- 3 horas + 30 min de vaciado -->
+    </time>
+    <processing>
+        <time-to-teleport value="-1"/>
+        <time-to-teleport.disconnected value="-1"/>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <collision.mingap-factor value="0"/>
+        <ignore-route-errors value="true"/>
+        <ignore-junction-blocker value="60"/>
+    </processing>
+    <output>
+        <tripinfo-output value="salida/tripinfo.xml"/>
+        <collision-output value="salida/collision.xml"/>
+        <statistic-output value="salida/statistic.xml"/>
+    </output>
+</configuration>
